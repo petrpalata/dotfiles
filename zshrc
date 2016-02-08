@@ -42,8 +42,8 @@ local blue_cp="%{$fg[red]%}]%{$reset_color%}"
 local path_p="%{$fg[yellow]%}%~%{$reset_color%}"
 local time_p="%{$fg[white]%}%{$bg[green]%}%*%{$reset_color%}"
 local user_host="${blue_op}%n@%m${blue_cp}"
-PROMPT="╭─${blue_op}${path_p}${blue_cp}─${user_host}
-╰─%# "
+PROMPT='╭─${blue_op}${path_p}${blue_cp}─${user_host}$(git_status_prompt)
+╰─%# '
 local cur_cmd="${blue_op}%_${blue_cp}"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -60,3 +60,17 @@ bindkey -M viins '^R' history-incremental-search-backward
 # RBENV configuration
 export RBENV_ROOT=/usr/local/var/rbenv #use homebrew directories
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi #enable shims
+
+# Git command line status
+source ~/.zsh_git_prompt/zsh_git_prompt.sh
+
+function git_status_prompt() {
+  local git_status
+  local super_status=$(git_super_status)
+  if [[ -z $super_status ]]; then
+     git_status=""
+  else 
+     git_status="-%b${super_status}"
+  fi
+  echo $git_status
+}
