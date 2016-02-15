@@ -17,6 +17,7 @@ Plugin 'bling/vim-airline' " nice status bar
 Plugin 'vim-airline/vim-airline-themes' " status bar themes
 Plugin 'klen/python-mode' " python autocompletion and linter
 Plugin 'brendonrapp/smyck-vim' " color scheme
+Plugin 'airblade/vim-gitgutter' " real-time git diff highlighting 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,3 +66,15 @@ colorscheme smyck
 " AIRLINE SETUP "
 "==============="
 let g:airline_powerline_fonts = 1
+
+"=========================="
+" PYTHON MODE PLUGIN SETUP "
+"=========================="
+let g:pymode_folding = 0
+let g:pymode_lint_on_write = 1
+let g:pymode_doc = 0
+
+"========================="
+" GIT GUTTER PLUGIN SETUP "
+"========================="
+set updatetime=250
