@@ -1,0 +1,10 @@
+alias gic='git commit'
+alias gipl='git pull'
+alias gips='git push'
+alias gis='git status'
+alias ls='ls -G'
+alias run-help=man
+alias savealias='alias | sed -e '\''s/^/alias /'\'' > ~/.zshalias'
+alias simfeeder='python ~/code/presenter/dev/zaapcommon/simulator/simfeeder.py'
+alias symbolicate=/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Resources/symbolicatecrash
+alias which-command=whence

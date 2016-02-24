@@ -78,3 +78,7 @@ let g:pymode_doc = 0
 " GIT GUTTER PLUGIN SETUP "
 "========================="
 set updatetime=250
+
+let g:ctrlp_custom_ignore = {
+            \ 'file': '\v\.(exe|so|dll|pyc)$'
+            \ }

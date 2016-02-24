@@ -31,12 +31,6 @@ else
     alias ls='ls --color'
 fi
 
-# git most used shortcuts
-alias gic='git commit'
-alias gipl='git pull'
-alias gips='git push'
-alias gis='git status'
-
 local blue_op="%{$fg[red]%}[%{$reset_color%}"
 local blue_cp="%{$fg[red]%}]%{$reset_color%}"
 local path_p="%{$fg[yellow]%}%~%{$reset_color%}"
@@ -74,3 +68,6 @@ function git_status_prompt() {
   fi
   echo $git_status
 }
+
+# alias
+source ~/.zshalias
