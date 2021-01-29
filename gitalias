@@ -1,0 +1,10 @@
+# -*- mode: gitconfig; -*-
+# vim: set filetype=gitconfig:
+[alias]
+    au = add -u
+    co = checkout
+    cob = checkout --branch
+    c = commit
+    ca = commit --amend
+    rc = rebase --continue
+    ras = rebase -i --autosquash
