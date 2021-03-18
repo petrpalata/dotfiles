@@ -32,7 +32,7 @@ function bindAppToHyper(appName, hotkey)
     end)
 end
 
-bindAppToHyper("Google Chrome", "b")
+bindAppToHyper("Google Chrome", "e")
 bindAppToHyper("iTerm2", "t")
 bindAppToHyper("Bear", "d")
 bindAppToHyper("Code", "v")
