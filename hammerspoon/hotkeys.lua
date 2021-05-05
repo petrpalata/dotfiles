@@ -38,6 +38,7 @@ bindAppToHyper("Bear", "d")
 bindAppToHyper("Code", "v")
 bindAppToHyper("Slack", "s")
 bindAppToHyper("Xcode", "x")
+bindAppToHyper("Zoom", "z")
 
 hs.hotkey.bind(hyperModifier, "b", function()
     hs.urlevent.openURL(string.format("bear://x-callback-url/open-note?title=%s", os.date("%d/%m/%Y")))

@@ -26,6 +26,19 @@ function tileLeft()
   win:setFrame(f)
 end
 
+function tileCenterFull()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w
+  f.h = max.h
+  win:setFrame(f)
+end
+
 function getWindowScreenIndex(window, screens, screenCount)
     local windowScreen = window:screen()
     for i = 1, screenCount do
@@ -51,3 +64,4 @@ end
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Right", tileRight)
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Left", tileLeft)
 hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "m", cycleFocusedWindow)
+hs.hotkey.bind({"cmd", "alt", "ctrl", "shift"}, "0", tileCenterFull)
