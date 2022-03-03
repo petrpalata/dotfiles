@@ -21,12 +21,17 @@ setopt appendhistory autocd extendedglob
 unsetopt beep nomatch notify
 bindkey -e
 
+
+
 # End of lines configured by zsh-newuser-install
 
 system=`uname`
 if  [[ $system = "Darwin" ]]; then  # mac specific settings
     alias ls='ls -G'
+    export PATH=/usr/local/opt/python/libexec/bin:$PATH
     export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
+    export PATH=~/Library/Python/3.9/bin:$PATH
+    export PYTHONPATH=~/Library/Python/3.9/site-packages
 else
     alias ls='ls --color'
 fi
@@ -44,8 +49,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 PATH=$PATH:/usr/local/sbin
-
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 set -o vi # use vi command line mode
 bindkey -M vicmd '^R' history-incremental-search-backward
@@ -69,5 +72,18 @@ function git_status_prompt() {
   echo $git_status
 }
 
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+powerline-daemon -q
+
+source ~/Library/Python/3.9/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
 # alias
 source ~/.zshalias
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export EDITOR=vim
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"

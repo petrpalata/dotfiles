@@ -13,8 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " my plugins 
 Plugin 'kien/ctrlp.vim' " fuzzy file search
-Plugin 'bling/vim-airline' " nice status bar
-Plugin 'vim-airline/vim-airline-themes' " status bar themes
+ Plugin 'bling/vim-airline' " nice status bar
+ Plugin 'vim-airline/vim-airline-themes' " status bar themes
 Plugin 'klen/python-mode' " python autocompletion and linter
 Plugin 'brendonrapp/smyck-vim' " color scheme
 Plugin 'airblade/vim-gitgutter' " real-time git diff highlighting 
@@ -78,6 +78,8 @@ let g:pymode_doc = 0
 " GIT GUTTER PLUGIN SETUP "
 "========================="
 set updatetime=250
+
+let g:loaded_ctrlp = 1
 
 let g:ctrlp_custom_ignore = {
             \ 'file': '\v\.(exe|so|dll|pyc)$'
