@@ -1,0 +1,12 @@
+{
+    "languageserver": {
+        "swift": {
+            "command": "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+            "trace.server": "verbose",
+            "filetypes": ["swift"]
+        }
+    },
+    "diagnostic.checkCurrentLine": true,
+    "vetur.trace.server": "verbose",
+    "solargraph.formatting": true
+}

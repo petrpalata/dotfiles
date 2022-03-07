@@ -1,2 +1,2 @@
 COPY_ALWAYS="zsh_git_prompt"
-SYMLINK_DIRS="hammerspoon"
+SYMLINK_DIRS="hammerspoon config"
