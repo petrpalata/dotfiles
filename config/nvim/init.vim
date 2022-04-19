@@ -54,3 +54,4 @@ nmap <silent> t<C-g> :TestVisit<CR>
 
 
 autocmd BufNewFile,BufRead *.leaf set filetype=html
+autocmd BufNewFile,BufRead Podfile,*.podspec set filetype=ruby

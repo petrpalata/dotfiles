@@ -4,23 +4,23 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" my plugins 
-Plugin 'kien/ctrlp.vim' " fuzzy file search
- Plugin 'bling/vim-airline' " nice status bar
- Plugin 'vim-airline/vim-airline-themes' " status bar themes
-Plugin 'klen/python-mode' " python autocompletion and linter
-Plugin 'brendonrapp/smyck-vim' " color scheme
-Plugin 'airblade/vim-gitgutter' " real-time git diff highlighting 
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+" " set the runtime path to include Vundle and initialize
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+" 
+" " let Vundle manage Vundle, required
+" Plugin 'VundleVim/Vundle.vim'
+" 
+" " my plugins 
+" Plugin 'kien/ctrlp.vim' " fuzzy file search
+"  Plugin 'bling/vim-airline' " nice status bar
+"  Plugin 'vim-airline/vim-airline-themes' " status bar themes
+" Plugin 'klen/python-mode' " python autocompletion and linter
+" Plugin 'brendonrapp/smyck-vim' " color scheme
+" Plugin 'airblade/vim-gitgutter' " real-time git diff highlighting 
+" 
+" " All of your Plugins must be added before the following line
+" call vundle#end()            " required
 filetype plugin indent on    " required
 
 "=================="
@@ -60,7 +60,7 @@ cmap w!! w !sudo tee > /dev/null %
 " COLORS "
 "========"
 set t_Co=256
-colorscheme smyck
+" colorscheme smyck
 
 "==============="
 " AIRLINE SETUP "
