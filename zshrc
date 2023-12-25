@@ -28,10 +28,8 @@ bindkey -e
 system=`uname`
 if  [[ $system = "Darwin" ]]; then  # mac specific settings
     alias ls='ls -G'
-    export PATH=/usr/local/opt/python/libexec/bin:$PATH
-    export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:$PATH
-    export PATH=~/Library/Python/3.9/bin:$PATH
-    export PYTHONPATH=~/Library/Python/3.9/site-packages
+    export PATH=/opt/homebrew/opt/python/libexec/bin:$PATH
+    export PATH=/opt/homebrew/bin:/opt/local/bin:/opt/local/sbin:$PATH
 else
     alias ls='ls --color'
 fi
@@ -55,8 +53,8 @@ bindkey -M vicmd '^R' history-incremental-search-backward
 bindkey -M viins '^R' history-incremental-search-backward
 
 # RBENV configuration
-export RBENV_ROOT=/usr/local/var/rbenv #use homebrew directories
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi #enable shims
+export RBENV_ROOT=/opt/homebrew/var/rbenv # use homebrew directories
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # enable shims
 
 # Git command line status
 source ~/.zsh_git_prompt/zsh_git_prompt.sh
@@ -78,12 +76,12 @@ export LANG=en_US.UTF-8
 
 powerline-daemon -q
 
-source ~/Library/Python/3.9/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+source /opt/homebrew/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # alias
 source ~/.zshalias
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export EDITOR=vim
+export EDITOR=nvim
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
