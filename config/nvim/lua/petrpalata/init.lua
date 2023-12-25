@@ -1,0 +1,5 @@
+require("petrpalata.remap")
+require("petrpalata.lazy")
+require("petrpalata.color")
+require("petrpalata.opt")
+require("petrpalata.diagnostic")

@@ -43,16 +43,12 @@ end
 
 nvim_lsp.sourcekit.setup {
     on_attach = on_attach,
-    cmd = {"sourcekit-lsp", "--log-level", "debug" },
+    cmd = {"sourcekit-lsp" },
     settings = {
         ["sourcekit-lsp"] = {
             inlayHints = {
                 enabled = true
             },
-            trace = {
-                server = "verbose"
-            },
-            serverArguments = {'--log-level', 'debug'}
         },
     },
     flags = {
